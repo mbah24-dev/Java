@@ -6,7 +6,7 @@
 /*   By: mbah <mbah@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 16:46:27 by mbah              #+#    #+#             */
-/*   Updated: 2025/03/04 14:38:06 by mbah             ###   ########.fr       */
+/*   Updated: 2025/03/04 14:41:07 by mbah             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ public class Player extends Person
 		System.out.println("Player name: " + this.name + " - Player age: " + this.age);
 	}
 
+	@Override 
 	public void	say(String msg)
 	{
 		System.out.println(msg);
