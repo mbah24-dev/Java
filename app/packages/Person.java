@@ -1,44 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Player.java                                        :+:      :+:    :+:   */
+/*   Person.java                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbah <mbah@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/16 16:46:27 by mbah              #+#    #+#             */
-/*   Updated: 2025/03/04 14:38:06 by mbah             ###   ########.fr       */
+/*   Created: 2025/03/04 14:14:38 by mbah              #+#    #+#             */
+/*   Updated: 2025/03/04 14:37:41 by mbah             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 package app.packages;
 
-public class Player extends Person
+public abstract class Person implements IPerson
 {
-	private int level;
+	protected int		age;
+	protected String	name;
 
-	public Player(String name, int age, int level)
+	Person(final int age, final String name)
 	{
-		super(age, name);
-		this.level = level;
+		this.age = age;
+		this.name = name;
 	}
 
-	public int	getLevel()
+	public int	getAge()
 	{
-		return (this.level);
+		return (this.age);
 	}
 
-	public void	setLevel(int level)
+	public void	setAge(int age)
 	{
-		this.level = level;
+		this.age = age;
 	}
 
-	public void display()
+	public String	getName()
 	{
-		System.out.println("Player name: " + this.name + " - Player age: " + this.age);
+		return (this.name);
 	}
 
-	public void	say(String msg)
+	public void	setName(String name)
 	{
-		System.out.println(msg);
+		this.name = name;
 	}
 }
